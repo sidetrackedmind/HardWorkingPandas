@@ -41,9 +41,3 @@ def get_price_summary(price_dict, summary_stat):
     for key in price_dict:
         summary_list.append(tuple([key, summary_stat(price_dict[key])]))
     return summary_list
-
-def plot_summary(summary_list, plot_title):
-    """return plot object"""
-    x_val = [i[0] for i in summary_list]
-    y_val = [i[1] for i in summary_list]
-    return plt.plot(x_val, y_val)
